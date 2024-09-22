@@ -34,7 +34,7 @@ The InfoDev Blog Platform is a web application designed for managing articles, a
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/elmorjanimohamed9/InfoDevBlog.git
    cd InfoDevBlog
    ```
 
