@@ -1,7 +1,7 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+const sequelize = require('../config/database');
+
 module.exports = (sequelize, DataTypes) => {
   class Article extends Model {
     /**
@@ -44,3 +44,12 @@ module.exports = (sequelize, DataTypes) => {
 
   return Article;
 };
+
+sequelize.sync()
+    .then(() => {
+        console.log('Database and tables created!');
+    })
+    .catch((error) => {
+        console.error('Error syncing database:', error);
+    });
+    
