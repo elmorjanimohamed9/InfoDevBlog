@@ -1,0 +1,50 @@
+<section class="bg-slate-50 dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+        <h2 class="mb-10 text-3xl text-center font-bold text-gray-900 underline underline-offset-8 decoration-4 decoration-blue-500 dark:text-white">Create a New Article</h2>
+        <form method="POST" enctype="multipart/form-data" class="space-y-4 block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" id="article-form">
+
+            <!-- Title -->
+            <div>
+                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+                <input type="text" name="title" id="title" placeholder="Enter article title" required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                <textarea name="description" id="description" placeholder="Brief description" required
+                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+            </div>
+
+            <!-- Content -->
+            <div>
+                <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Content</label>
+                <textarea name="content" id="my-expressjs-tinymce-app" class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+            </div>
+
+            <div>
+                <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload Image</label>
+                <input type="file" name="image" id="image" accept="image/*" required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                <div id="image-preview-container" class="mt-4 flex items-center justify-center">
+                    <div class="relative">
+                        <img id="image-preview" class="hidden w-96 h-56 rounded-lg border border-gray-300 shadow-sm" alt="Image Preview" />
+                        <button id="remove-image" class="hidden absolute top-[2px] right-[-22px] bg-red-500 text-white rounded-full w-6 h-6 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 transform -translate-x-1/2 -translate-y-1/2" title="Remove Image">
+                            <i class="fas fa-times font-semibold"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-btn" class="inline-flex items-center px-5 py-2.5 mt-4 text-sm font-medium text-center text-white bg-blue-600 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-700">
+                Create Article
+            </button>
+
+        </form>
+    </div>
+</section>
+
+<script src="/assets/js/create.js"></script>
