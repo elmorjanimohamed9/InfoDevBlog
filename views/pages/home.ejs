@@ -1,0 +1,182 @@
+<section class="ezy__blog7 light text-stone-800 bg-slate-50 dark:bg-[#0b1727] dark:text-white">
+  <img
+    src="https://cdn.easyfrontend.com/pictures/blog/wide-banner.png"
+    alt=""
+    class="h-auto max-w-full w-full"
+  />
+
+  <section class="ezy__service6 light px-20 py-14 md:px-8 lg:py-16 xl:px-28 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
+    <div class="container px-4 mx-auto">
+      <div class="flex items-center justify-center mb-6 sm:mb-12">
+        <div class="w-full max-w-xl text-center">
+          <h2 class="text-3xl leading-none md:text-[45px] font-bold mb-4 underline underline-offset-8 decoration-4 decoration-blue-500">Our Services</h2>
+          <p class="text-lg opacity-80 mb-6">
+            Discover a wide range of development solutions designed to help you build and optimize digital platforms with precision and efficiency.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="col-span-3 md:col-span-1">
+          <div class="text-center xl:p-6">
+            <div
+              class="w-[72px] h-[72px] rounded-full text-[32px] inline-flex justify-center items-center bg-red-400 bg-opacity-10 text-red-400 mb-6"
+            >
+              <i class="fas fa-code"></i>
+            </div>
+            <h4 class="text-2xl font-medium mb-4">Full-Stack Development</h4>
+            <p class="opacity-80">
+              Build dynamic and scalable web applications with our comprehensive full-stack development services, utilizing the latest technologies.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-3 md:col-span-1">
+          <div class="text-center xl:p-6">
+            <div
+              class="w-[72px] h-[72px] rounded-full text-[32px] inline-flex justify-center items-center bg-blue-600 bg-opacity-10 text-blue-600 mb-6"
+            >
+              <i class="fas fa-database"></i>
+            </div>
+            <h4 class="text-2xl font-medium mb-4">Database Management</h4>
+            <p class="opacity-80">
+              Ensure data integrity and optimal performance with our expert database management services, tailored to meet your application's needs.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-3 md:col-span-1">
+          <div class="text-center xl:p-6">
+            <div
+              class="w-[72px] h-[72px] rounded-full text-[32px] inline-flex justify-center items-center bg-yellow-300 bg-opacity-10 text-yellow-300 mb-6"
+            >
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4 class="text-2xl font-medium mb-4">Security and Optimization</h4>
+            <p class="opacity-80">
+              Protect your web applications and improve performance with our advanced security protocols and optimization techniques.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <div class="ezy__blog5 light py-10 md:py-10 text-stone-800 bg-white dark:bg-[#0b1727] dark:text-white overflow-hidden">
+    <div class="container px-20 md:px-8 xl:px-28">
+      <div class="grid grid-cols-12 justify-center">
+        <div class="col-span-12 lg:col-span-8 lg:col-start-3 lg:col-end-11 text-center">
+          <h2 class="text-[32px] lg:text-[45px] leading-none font-bold mb-4 underline underline-offset-8 decoration-4 decoration-blue-500">
+            Our Blog
+          </h2>
+          <p class="text-lg opacity-80 mb-6">
+            Stay updated with the latest insights, trends, and best practices in web development, technology, and digital transformation. Our blog offers valuable content for developers, tech enthusiasts, and businesses alike.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900">
+        <h3 class="text-3xl font-bold mt-14 underline underline-offset-8 decoration-4 decoration-blue-500">Recent Articles</h3>
+        <div class="py-6 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div class="grid gap-8 lg:grid-cols-2">
+            <% recentArticles.forEach(article => { %>
+              <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex justify-between items-center mb-5 text-gray-500">
+                  <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                    <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                    Article
+                </span>
+                  <span class="text-sm"><%= article.createdAt.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) %></span>
+                </div>
+                <h2 class="mb-2 text-2xl font-bold tracking-tight break-words truncate text-gray-900 dark:text-white">
+                  <a href="#"><%= article.title %></a>
+                </h2>
+                <p class="mb-5 font-light text-gray-500 break-words line-clamp-2 dark:text-gray-400"><%= article.description %></p>
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center space-x-4">
+                    <img class="w-7 h-7 rounded-full" src="/assets/img/author.png" alt="Author avatar" />
+                    <span class="font-medium dark:text-white">Mohamed El Morjani</span>
+                  </div>
+                  <a href="/articles/<%= article.id %>" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                    Read more
+                    <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- More Articles Section -->
+      <div >
+        <h3 class="text-3xl font-bold mb-6 underline underline-offset-8 decoration-4 decoration-blue-500">More Articles</h3>
+        <div class="grid grid-cols-12 items-center gap-6">
+          
+          <% articles.forEach(article => { %>
+            <div class="col-span-12 md:col-span-6 lg:col-span-4 h-full mt-6">
+              <article class="flex flex-col shadow-lg dark:bg-[#1E2735] dark:shadow-none rounded-lg overflow-hidden pb-2 h-full">
+                <div class="h-56 w-full">
+                  <img
+                    src="/assets/img/<%= article.image %>"
+                    alt=""
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="flex flex-col justify-between grow p-3 pb-4 lg:p-6">
+                  <div>
+                    <h4 class="font-medium text-2xl mb-1 break-words truncate line-clamp-2">
+                      <%= article.title %>
+                    </h4>
+                    <p class="opacity-80 mb-2">
+                      <span class="mr-2">
+                        By <a href="" class="text-blue-600">Mohamed El Morjani</a>
+                      </span>
+                      <span>
+                        <i class="far fa-clock ml-1"></i>
+                        <span><%= article.createdAt.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) %> </span>
+                      </span>
+                    </p>
+                    <p class="opacity-60 mt-3 mb-6 break-words line-clamp-3">
+                      <%= article.description %>
+                    </p>
+                  </div>
+                  <div>
+                    <a
+                      href="/articles/<%= article.id %>"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >Read More</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Back to top button -->
+<button
+  type="button"
+  data-twe-ripple-init
+  data-twe-ripple-color="light"
+  class="!fixed bottom-5 end-5 hidden rounded-full bg-blue-500 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+  id="btn-back-to-top">
+  <span class="[&>svg]:w-4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="3"
+      stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+    </svg>
+  </span>
+</button>
