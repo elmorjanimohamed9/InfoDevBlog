@@ -3,7 +3,7 @@
 ## Description
 The InfoDev Blog Platform is a web application designed for managing articles, allowing users to create, view, edit, and delete articles. This platform provides an easy-to-use interface and utilizes Node.js, Express.js, Sequelize, and MySQL for the backend, along with EJS and TailwindCSS for the frontend.
 
-![InfoDev Blog Platform Screenshot](https://imgur.com/a/cfNMpjQ)
+![InfoDev Blog Platform Screenshot](https://imgur.com/a/cfNMpjQ.png)
 
 ## Features
 - Create new articles with a title, description, content, and optional image.
